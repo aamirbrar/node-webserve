@@ -32,6 +32,11 @@ app.get('/',(req,res) => {
         welcomeMsg:'Welcome To ApporioInfolabs'
     });
 });
+app.get('/projects',(req,res) => {
+   res.render('projects.hbs',{
+    pageTitle:'Projects',
+   });
+});
 app.get('/about',(req,res) =>{
     res.render('about.hbs',{
         pageTitle:'About ApporioTaxi',
