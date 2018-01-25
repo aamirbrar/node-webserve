@@ -1,6 +1,7 @@
 var express = require('express');
 var hbs = require('hbs');
 var fs = require('fs');
+const port = process.env.PORT || 3000;
 var app = express();
 hbs.registerPartials(__dirname + '/views/partials');
 app.set('view engine','hbs');
@@ -42,6 +43,6 @@ app.get('/bad',(req,res) => {
         errorMessage:'400 Bad Request'
     });
 });
-app.listen(3000,() => {
-    console.log('server running at 3000');
+app.listen(port,() => {
+    console.log(`server running at ${port}`);
 });
